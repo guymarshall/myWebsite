@@ -1,30 +1,36 @@
-function calculate_required_insulin(carbsPer100, gramsOnScale, insulinRatio) {
+function calculateRequiredInsulin(carbsPer100, gramsOnScale, insulinRatio) {
     const carbsPerGram = carbsPer100 / 100;
     const totalGramsCarbs = carbsPerGram * gramsOnScale;
     const insulinNeeded = (totalGramsCarbs / 10) * insulinRatio;
 
     return {
-        "totalCarbs": totalGramsCarbs,
-        "insulinRequired": insulinNeeded
+        totalCarbs: totalGramsCarbs,
+        insulinRequired: insulinNeeded
     };
 }
 
-$(document).ready(() => {
-    $('#clearInputs').on('click', () => {
-        $('#carbsPer100').val('');
-        $('#gramsOnScale').val('');
-        $('#insulinRatio').val('');
+document.addEventListener('DOMContentLoaded', () => {
+    document.getElementById('clearInputs').addEventListener('click', () => {
+        document.getElementById('carbsPer100').value = '';
+        document.getElementById('gramsOnScale').value = '';
+        document.getElementById('insulinRatio').value = '';
 
-        $('#carbsResult').text('');
-        $('#insulinResult').text('');
+        document.getElementById('carbsResult').textContent = '';
+        document.getElementById('insulinResult').textContent = '';
     });
-    $('#calculateInsulin').on('click', () => {
-        const carbsPer100 = $('#carbsPer100').val();
-        const gramsOnScale = $('#gramsOnScale').val();
-        const insulinRatio = $('#insulinRatio').val();
-        const result = calculate_required_insulin(carbsPer100, gramsOnScale, insulinRatio);
 
-        $('#carbsResult').text(`Total carbs: ${result['totalCarbs']}.`);
-        $('#insulinResult').text(`Insulin required: ${result['insulinRequired']}.`);
+    document.getElementById('calculateInsulin').addEventListener('click', () => {
+        const carbsPer100 = parseFloat(document.getElementById('carbsPer100').value);
+        const gramsOnScale = parseFloat(document.getElementById('gramsOnScale').value);
+        const insulinRatio = parseFloat(document.getElementById('insulinRatio').value);
+
+        if (!isNaN(carbsPer100) && !isNaN(gramsOnScale) && !isNaN(insulinRatio)) {
+            const result = calculateRequiredInsulin(carbsPer100, gramsOnScale, insulinRatio);
+
+            document.getElementById('carbsResult').textContent = `Total carbs: ${result.totalCarbs}.`;
+            document.getElementById('insulinResult').textContent = `Insulin required: ${result.insulinRequired}.`;
+        } else {
+            alert('Please enter valid numeric values for all inputs.');
+        }
     });
 });
