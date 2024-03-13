@@ -69,3 +69,8 @@ div.form-div {
     margin: 0 auto;
     font-family: 'Arial', sans-serif;
 }
+
+h1.page-heading {
+    text-align: center;
+    font-family: 'Arial', sans-serif;
+}
