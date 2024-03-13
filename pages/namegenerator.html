@@ -7,8 +7,8 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
     <link rel="stylesheet" href="/styles/style.css">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js" integrity="sha384-BBtl+eGJRgqQAUMxJ7pMwbEyER4l1g+O15P+16Ep7Q9Q+zqX6gSbd85u4mG4QzX+" crossorigin="anonymous"></script>
-    <script src="/scripts/insulinCalculator.js"></script>
-    <title>Insulin Calculator</title>
+    <script src="/scripts/nameGenerator.js"></script>
+    <title>Name Generator</title>
 </head>
 <body>
     <header>
@@ -36,19 +36,19 @@
     </header>
     <div class="container">
         <main role="main" class="pb-3">
-            <div class="form-group container col-sm-4" id="inputFields">
-                <input class="form-control" autocomplete="nope" type="number" inputmode="decimal" id="carbsPer100" name="carbsPer100" step="0.1" autocomplete="nope" min="0" placeholder="Carbohydrate per 100g">
+            <h1 style="text-align: center; font-family: 'Arial', sans-serif;">Dummy Name Generator</h1>
+            <div style="max-width: 400px; margin: 0 auto; font-family: 'Arial', sans-serif;">
+                <label for="number-of-names" style="display: block; margin-bottom: 8px;">Number to generate:</label>
+                <input type="number" id="number-of-names" name="number-of-names" style="width: 100%; padding: 8px; margin-bottom: 16px; box-sizing: border-box;" required>
                 <br>
-                <input class="form-control" autocomplete="nope" type="number" inputmode="decimal" id="gramsOnScale" name="gramsOnScale" step="0.1" autocomplete="nope" min="0" placeholder="Grams on scale">
+                <label for="minimum-length" style="display: block; margin-bottom: 8px;">Minimum length:</label>
+                <input type="number" id="minimum-length" name="minimum-length" min="1" step="1" style="width: 100%; padding: 8px; margin-bottom: 16px; box-sizing: border-box;" required>
                 <br>
-                <input class="form-control" autocomplete="nope" type="number" inputmode="decimal" id="insulinRatio" name="insulinRatio" step="0.1" autocomplete="nope" min="0" placeholder="Insulin ratio (insulin per 10g carbohydrate)">
+                <label for="maximum-length" style="display: block; margin-bottom: 8px;">Maximum length:</label>
+                <input type="number" id="maximum-length" name="maximum-length" min="1" step="1" style="width: 100%; padding: 8px; margin-bottom: 16px; box-sizing: border-box;" required>
                 <br>
-                <button class="btn btn-primary" name="calculateInsulin" id="calculateInsulin">Calculate</button>
-                <button class="btn btn-danger" name="clearInputs" id="clearInputs">Clear</button>
+                <button type="submit" id="generate-random-names" style="background-color: #4CAF50; color: white; padding: 10px 15px; border: none; border-radius: 4px; cursor: pointer; font-size: 16px;">Generate</button>
             </div>
-            <hr>
-            <p name="carbsResult" id="carbsResult"></p>
-            <p name="insulinResult" id="insulinResult"></p>
         </main>
     </div>
     <footer class="border-top footer text-muted">
