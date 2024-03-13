@@ -36,15 +36,19 @@
     </header>
     <div class="container">
         <main role="main" class="pb-3">
-            <div class="form-group container col-sm-4" id="inputFields">
-                <input class="form-control" autocomplete="nope" type="number" inputmode="decimal" id="carbsPer100" name="carbsPer100" step="0.1" autocomplete="nope" min="0" placeholder="Carbohydrate per 100g">
+            <h1 style="text-align: center; font-family: 'Arial', sans-serif;">Carb Counter</h1>
+            <div style="max-width: 400px; margin: 0 auto; font-family: 'Arial', sans-serif;" id="inputFields">
+                <label for="carbsPer100" style="display: block; margin-bottom: 8px;">Carbohydrate per 100g;</label>
+                <input style="width: 100%; padding: 8px; margin-bottom: 16px; box-sizing: border-box;" autocomplete="nope" type="number" inputmode="decimal" id="carbsPer100" name="carbsPer100" step="0.1" autocomplete="nope" min="0">
                 <br>
-                <input class="form-control" autocomplete="nope" type="number" inputmode="decimal" id="gramsOnScale" name="gramsOnScale" step="0.1" autocomplete="nope" min="0" placeholder="Grams on scale">
+                <label for="gramsOnScale" style="display: block; margin-bottom: 8px;">Grams on scale:</label>
+                <input style="width: 100%; padding: 8px; margin-bottom: 16px; box-sizing: border-box;" autocomplete="nope" type="number" inputmode="decimal" id="gramsOnScale" name="gramsOnScale" step="0.1" autocomplete="nope" min="0">
                 <br>
-                <input class="form-control" autocomplete="nope" type="number" inputmode="decimal" id="insulinRatio" name="insulinRatio" step="0.1" autocomplete="nope" min="0" placeholder="Insulin ratio (insulin per 10g carbohydrate)">
+                <label for="insulinRatio" style="display: block; margin-bottom: 8px;">Insulin ratio (insulin per 10g carbohydrate):</label>
+                <input style="width: 100%; padding: 8px; margin-bottom: 16px; box-sizing: border-box;" autocomplete="nope" type="number" inputmode="decimal" id="insulinRatio" name="insulinRatio" step="0.1" autocomplete="nope" min="0">
                 <br>
-                <button class="btn btn-primary" name="calculateInsulin" id="calculateInsulin">Calculate</button>
-                <button class="btn btn-danger" name="clearInputs" id="clearInputs">Clear</button>
+                <button name="calculateInsulin" id="calculateInsulin" style="background-color: #4CAF50; color: white; padding: 10px 15px; border: none; border-radius: 4px; cursor: pointer; font-size: 16px;">Calculate</button>
+                <button name="clearInputs" id="clearInputs" style="background-color: #D2042D; color: white; padding: 10px 15px; border: none; border-radius: 4px; cursor: pointer; font-size: 16px;">Reset</button>
             </div>
             <hr>
             <p name="carbsResult" id="carbsResult"></p>
