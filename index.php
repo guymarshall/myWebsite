@@ -11,15 +11,14 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js"
         integrity="sha384-BBtl+eGJRgqQAUMxJ7pMwbEyER4l1g+O15P+16Ep7Q9Q+zqX6gSbd85u4mG4QzX+"
         crossorigin="anonymous"></script>
-    <script src="scripts/nameGenerator.js"></script>
-    <title>Name Generator</title>
+    <title>Index</title>
 </head>
 
 <body>
     <header>
         <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light bg-white border-bottom box-shadow mb-3">
             <div class="container">
-                <a class="navbar-brand" href="index.html">My Website</a>
+                <a class="navbar-brand" href="index.php">My Website</a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target=".navbar-collapse"
                     aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
@@ -27,16 +26,16 @@
                 <div class="navbar-collapse collapse d-sm-inline-flex justify-content-between">
                     <ul class="navbar-nav flex-grow-1">
                         <li class="nav-item">
-                            <a class="nav-link" href="index.html">Home</a>
+                            <a class="nav-link text-dark" href="index.php">Home</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="insulincalculator.html">Insulin Calculator</a>
+                            <a class="nav-link" href="insulincalculator.php">Insulin Calculator</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link text-dark" href="namegenerator.html">Name Generator</a>
+                            <a class="nav-link" href="namegenerator.php">Name Generator</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="diceroller.html">Dice Roller</a>
+                            <a class="nav-link" href="diceroller.php">Dice Roller</a>
                         </li>
                     </ul>
                 </div>
@@ -45,21 +44,18 @@
     </header>
     <div class="container">
         <main role="main" class="pb-3">
-            <h1 class="page-heading">Name Generator</h1>
-            <div class="form-div">
-                <label for="number-of-names" class="input-label">Number to generate:</label>
-                <input type="number" id="number-of-names" name="number-of-names" class="input-field" required>
-                <br>
-                <label for="minimum-length" class="input-label">Minimum length:</label>
-                <input type="number" id="minimum-length" name="minimum-length" min="1" step="1" class="input-field"
-                    required>
-                <br>
-                <label for="maximum-length" class="input-label">Maximum length:</label>
-                <input type="number" id="maximum-length" name="maximum-length" min="1" step="1" class="input-field"
-                    required>
-                <br>
-                <button type="submit" id="generate-random-names" class="green-button">Generate</button>
-            </div>
+            <h1 class="page-heading">Home</h1>
+            <p>This is my website! It includes a few projects I have completed and use on a daily-basis and a brief
+                description of me. Feel free to have a look around!</p>
+            <p>If you have any suggestions for projects or change requests, visit my <a
+                    href="https://github.com/guymarshall">GitHub</a>, or <a
+                    href="mailto:guymarshall.c@gmail.com">email</a> me.</p>
+
+            <h2 class="page-heading">About Me</h2>
+            <p>I am Guy, a passionate software developer that likes to tinker with hardware through software. I am
+                interested in making software for the computers we use today to run, to improve our workflow.</p>
+            <img src="https://avatars.githubusercontent.com/u/75757034?v=4"
+                class="rounded float-end mx-auto d-block img-fluid">
         </main>
     </div>
 </body>

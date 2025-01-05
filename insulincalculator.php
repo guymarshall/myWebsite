@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+        integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <link rel="stylesheet" href="styles/style.css">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js"
+        integrity="sha384-BBtl+eGJRgqQAUMxJ7pMwbEyER4l1g+O15P+16Ep7Q9Q+zqX6gSbd85u4mG4QzX+"
+        crossorigin="anonymous"></script>
+    <script src="scripts/insulinCalculator.js"></script>
+    <title>Insulin Calculator</title>
+</head>
+
+<body>
+    <header>
+        <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light bg-white border-bottom box-shadow mb-3">
+            <div class="container">
+                <a class="navbar-brand" href="index.php">My Website</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target=".navbar-collapse"
+                    aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="navbar-collapse collapse d-sm-inline-flex justify-content-between">
+                    <ul class="navbar-nav flex-grow-1">
+                        <li class="nav-item">
+                            <a class="nav-link" href="index.php">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-dark" href="insulincalculator.php">Insulin
+                                Calculator</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="namegenerator.php">Name Generator</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="diceroller.php">Dice Roller</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <div class="container">
+        <main role="main" class="pb-3">
+            <h1 class="page-heading">Insulin Calculator</h1>
+            <div class="form-div" id="inputFields">
+                <label for="carbsPer100" class="input-label">Carbohydrate per 100g:</label>
+                <input class="input-field" autocomplete="nope" type="number" inputmode="decimal" id="carbsPer100"
+                    name="carbsPer100" step="0.1" autocomplete="nope" min="0">
+                <br>
+                <label for="gramsOnScale" class="input-label">Grams on scale:</label>
+                <input class="input-field" autocomplete="nope" type="number" inputmode="decimal" id="gramsOnScale"
+                    name="gramsOnScale" step="0.1" autocomplete="nope" min="0">
+                <br>
+                <label for="insulinRatio" class="input-label">Insulin ratio (insulin per 10g carbohydrate):</label>
+                <input class="input-field" autocomplete="nope" type="number" inputmode="decimal" id="insulinRatio"
+                    name="insulinRatio" step="0.1" autocomplete="nope" min="0">
+                <br>
+                <button name="calculateInsulin" id="calculateInsulin" class="green-button">Calculate</button>
+                <button name="clearInputs" id="clearInputs" class="red-button">Reset</button>
+            </div>
+            <hr>
+            <p name="carbsResult" id="carbsResult"></p>
+            <p name="insulinResult" id="insulinResult"></p>
+        </main>
+    </div>
+</body>
+
+</html>
