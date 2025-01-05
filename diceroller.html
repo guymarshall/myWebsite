@@ -11,7 +11,8 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js"
         integrity="sha384-BBtl+eGJRgqQAUMxJ7pMwbEyER4l1g+O15P+16Ep7Q9Q+zqX6gSbd85u4mG4QzX+"
         crossorigin="anonymous"></script>
-    <title>Index</title>
+    <script src="/my-website/scripts/diceRoller.js"></script>
+    <title>Dice Roller</title>
 </head>
 
 <body>
@@ -26,7 +27,7 @@
                 <div class="navbar-collapse collapse d-sm-inline-flex justify-content-between">
                     <ul class="navbar-nav flex-grow-1">
                         <li class="nav-item">
-                            <a class="nav-link text-dark" href="/my-website/index.html">Home</a>
+                            <a class="nav-link" href="/my-website/index.html">Home</a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link" href="/my-website/insulincalculator.html">Insulin Calculator</a>
@@ -35,7 +36,7 @@
                             <a class="nav-link" href="/my-website/namegenerator.html">Name Generator</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="/my-website/diceroller.html">Dice Roller</a>
+                            <a class="nav-link text-dark" href="/my-website/diceroller.html">Dice Roller</a>
                         </li>
                     </ul>
                 </div>
@@ -44,18 +45,17 @@
     </header>
     <div class="container">
         <main role="main" class="pb-3">
-            <h1 class="page-heading">Home</h1>
-            <p>This is my website! It includes a few projects I have completed and use on a daily-basis and a brief
-                description of me. Feel free to have a look around!</p>
-            <p>If you have any suggestions for projects or change requests, visit my <a
-                    href="https://github.com/guymarshall">GitHub</a>, or <a
-                    href="mailto:guymarshall.c@gmail.com">email</a> me.</p>
-
-            <h2 class="page-heading">About Me</h2>
-            <p>I am Guy, a passionate software developer that likes to tinker with hardware through software. I am
-                interested in making software for the computers we use today to run, to improve our workflow.</p>
-            <img src="https://avatars.githubusercontent.com/u/75757034?v=4"
-                class="rounded float-end mx-auto d-block img-fluid">
+            <h1 class="page-heading">Dice Roller</h1>
+            <div class="form-div">
+                <label for="number-of-dice" class="input-label">Number of dice to roll:</label>
+                <input type="number" id="number-of-dice" name="number-of-dice" class="input-field" required>
+                <br>
+                <label for="number-of-sides" class="input-label">Number of sides per die:</label>
+                <input type="number" id="number-of-sides" name="number-of-sides" min="1" step="1" class="input-field"
+                    required>
+                <br>
+                <button type="submit" id="roll-dice" class="green-button">Roll Dice</button>
+            </div>
         </main>
     </div>
 </body>
