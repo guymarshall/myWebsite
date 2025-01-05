@@ -13,7 +13,7 @@ function isNumeric(input) {
 
 function submit() {
     const numberOfDice = document.getElementById('number-of-dice').value;
-    const numberOfSides = document.getElementById('minimum-length').value;
+    const numberOfSides = document.getElementById('number-of-sides').value;
 
     if (!isNumeric(numberOfDice) || Math.floor(numberOfDice) === numberOfDice || numberOfDice <= 0) {
         return alert('Please enter a valid whole number for number of dice.');
