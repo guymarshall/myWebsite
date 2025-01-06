@@ -1,67 +1,7 @@
-<!DOCTYPE html>
-<html lang="en">
+<?php
 
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
-        integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
-    <link rel="stylesheet" href="styles/style.css">
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js"
-        integrity="sha384-BBtl+eGJRgqQAUMxJ7pMwbEyER4l1g+O15P+16Ep7Q9Q+zqX6gSbd85u4mG4QzX+"
-        crossorigin="anonymous"></script>
-    <script src="scripts/nameGenerator.js"></script>
-    <title>Name Generator</title>
-</head>
+require_once 'page.php';
 
-<body>
-    <header>
-        <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light bg-white border-bottom box-shadow mb-3">
-            <div class="container">
-                <a class="navbar-brand" href="index.php">My Website</a>
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target=".navbar-collapse"
-                    aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-                <div class="navbar-collapse collapse d-sm-inline-flex justify-content-between">
-                    <ul class="navbar-nav flex-grow-1">
-                        <li class="nav-item">
-                            <a class="nav-link" href="index.php">Home</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="insulincalculator.php">Insulin Calculator</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link text-dark" href="namegenerator.php">Name Generator</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="diceroller.php">Dice Roller</a>
-                        </li>
-                    </ul>
-                </div>
-            </div>
-        </nav>
-    </header>
-    <div class="container">
-        <main role="main" class="pb-3">
-            <h1 class="page-heading">Name Generator</h1>
-            <div class="form-div">
-                <label for="number-of-names" class="input-label">Number to generate:</label>
-                <input type="number" id="number-of-names" name="number-of-names" class="input-field" required>
-                <br>
-                <label for="minimum-length" class="input-label">Minimum length:</label>
-                <input type="number" id="minimum-length" name="minimum-length" min="1" step="1" class="input-field"
-                    required>
-                <br>
-                <label for="maximum-length" class="input-label">Maximum length:</label>
-                <input type="number" id="maximum-length" name="maximum-length" min="1" step="1" class="input-field"
-                    required>
-                <br>
-                <button type="submit" id="generate-random-names" class="green-button">Generate</button>
-            </div>
-        </main>
-    </div>
-</body>
+$page = new Page('Name Generator', 'nameGenerator.js');
 
-</html>
+$page->render();
