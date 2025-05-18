@@ -80,6 +80,13 @@ class Page
                     <button type="submit" id="roll-dice" class="green-button">Roll Dice</button>
                 </div>
             ',
+            'Password Generator' => '
+                <h1 class="page-heading">Password Generator</h1>
+                <div class="form-div">
+                    <button type="button" id="generate-password" class="green-button" onclick="location.reload()">Generate</button>
+                    <div id="generated-password" class="input-field fs-3" style="user-select: all;">' . generatePassword() . '</div>
+                </div>
+            ',
             default => exit('Invalid title')
         };
     }
@@ -124,6 +131,9 @@ class Page
                             </li>
                             <li class="nav-item">
                                 <a class="nav-link' . ($this->title === 'Dice Roller' ? ' text-dark' : '') . '" href="diceroller.php">Dice Roller</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link' . ($this->title === 'Password Generator' ? ' text-dark' : '') . '" href="passwordgenerator.php">Password Generator</a>
                             </li>
                         </ul>
                     </div>
